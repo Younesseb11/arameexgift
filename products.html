@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Aramex Gifts</title>
+  <link rel="stylesheet" href="css/product.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Card UI Design</title>
+
+    <!-- Vendor Script -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="imgBx">
+            <img src="images/black.png" alt="IPHONE 14">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Iphone 14 Pro Max <br>
+                    <span>256 GB</span>
+                </h2>
+
+                <p class="product-colors">
+                    <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="images/black.png"></span>
+                    <span class="white" data-color-primary="#adadad" data-color-sec="#ebebeb" data-pic="images/white.png"></span>
+                    <span class="purpel" data-color-primary="#500474" data-color-sec="#7520b5" data-pic="images/purpel.png"></span>
+                    <span class="gold" data-color-primary="#e3dbab" data-color-sec="#ffeebc" data-pic="images/gold.png"></span>
+                    <b style="font-size: 22px;">:الألوان المتاحة</b>
+                </p>
+                
+                <a href="Adress.html" style="text-decoration: none;">استمرار</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.aramex.com" target="_blank">Aramex</a>
+    </footer>
+
+
+    <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active");
+            $(this).addClass("active");
+            $(".active").css("border-color", $(this).attr("data-color-sec"))
+            $("body").css("background", $(this).attr("data-color-primary"));
+            $(".content h2").css("color", $(this).attr("data-color-sec"));
+            $(".content h3").css("color", $(this).attr("data-color-sec"));
+            $(".container .imgBx").css("background", $(this).attr("data-color-sec"));
+            $(".container .details a").css("background", $(this).attr("data-color-sec"));
+            $(".imgBx img").attr('src', $(this).attr("data-pic"));
+        });
+    </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
